@@ -1,8 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import { globalTokens as $, spacing, text } from "./globalTokens.stylex";
 
-const HOMEPAGE = "http://stylex-docusaurus.vercel.app";
-
 export default function Home() {
   return (
     <main {...stylex.props(s.main)}>

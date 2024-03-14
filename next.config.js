@@ -9,6 +9,8 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 };
 
-module.exports = stylexPlugin({
+module.exports = {...stylexPlugin({
   rootDir: __dirname,
-})(withMDX(nextConfig));
+})(withMDX(nextConfig)), compiler: {
+  styledComponents: true
+}};

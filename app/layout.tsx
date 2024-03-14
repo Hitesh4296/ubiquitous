@@ -2,6 +2,8 @@ import "./globals.css";
 
 import { globalTokens as $ } from "./globalTokens.stylex";
 import * as stylex from "@stylexjs/stylex";
+import StyledJsxRegistry from './registry'
+
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html {...stylex.props(styles.html, styles.reset)} lang="en">
-      <body {...stylex.props(styles.reset, styles.body)}>{children}</body>
+      <StyledJsxRegistry>
+        <body {...stylex.props(styles.reset, styles.body)}>{children}</body>
+      </StyledJsxRegistry>
     </html>
   );
 }
